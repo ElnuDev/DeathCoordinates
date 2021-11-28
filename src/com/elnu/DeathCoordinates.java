@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.time.LocalDateTime;
@@ -44,6 +45,18 @@ public class DeathCoordinates extends JavaPlugin {
             } catch(NullPointerException e) {
                 sender.sendMessage(ChatColor.YELLOW + "No death coordinates to announce.");
             }
+            return true;
+        } else if (cmd.getName().equalsIgnoreCase("announcelocation")) {
+            var player = (Player) sender;
+            var location = player.getLocation();
+            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + String.format(
+                    "%s is announcing that they are at (%d, %d, %d) in %s.",
+                    sender.getName(),
+                    location.getBlockX(),
+                    location.getBlockY(),
+                    location.getBlockZ(),
+                    location.getWorld().getEnvironment()
+            ));
             return true;
         }
         return false;

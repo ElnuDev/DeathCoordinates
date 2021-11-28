@@ -6,3 +6,6 @@ commands:
   announcedeath:
     description: Announce last death coordinates.
     usage: /announcedeath
+  announcelocation:
+    description: Announce location.
+    usage: /announcedeath
