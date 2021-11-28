@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DeathCoordinates:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DeathCoordinates_jar</output-path>
+    <root id="archive" name="DeathCoordinates.jar">
+      <element id="module-output" name="DeathCoordinates" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>

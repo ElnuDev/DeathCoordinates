@@ -1,0 +1,8 @@
+name: DeathCoordinates
+main: com.elnu.DeathCoordinates
+version: 1.0
+author: ElnuDraws
+commands:
+  announcedeath:
+    description: Announce last death coordinates.
+    usage: /announcedeath
