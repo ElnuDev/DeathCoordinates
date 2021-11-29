@@ -40,7 +40,7 @@ public class DeathCoordinates extends JavaPlugin {
                         location.getBlockZ(),
                         location.getWorld().getEnvironment(),
                         minutesSinceDeath,
-                        secondsSinceDeath
+                        secondsSinceDeath - minutesSinceDeath * 60
                 ));
             } catch(NullPointerException e) {
                 sender.sendMessage(ChatColor.YELLOW + "No death coordinates to announce.");
